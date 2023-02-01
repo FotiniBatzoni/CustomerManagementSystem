@@ -2,7 +2,7 @@
 {
     public class OrderItem
     {
-        public Guid OrderId { get; set; }
+        public Guid OrderItemId { get; set; }
 
         public float Quantity { get; set; }
 
