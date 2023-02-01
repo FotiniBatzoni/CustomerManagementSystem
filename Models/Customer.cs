@@ -9,7 +9,16 @@
 
         public string FullName {
             get{
-                return LastName + "," + FirstName;
+                string fullName = LastName;
+                if (!string.IsNullOrEmpty(FirstName))
+                {
+                    if (!string.IsNullOrEmpty(fullName))
+                    {
+                        fullName += ", ";
+                    }
+                    fullName += FirstName;
+                }
+                return fullName;
             } 
         }
 

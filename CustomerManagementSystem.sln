@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystem", "CustomerManagementSystem.csproj", "{05124F1B-FF29-41E3-AD9E-780C730BFDAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagementSystem", "CustomerManagementSystem.csproj", "{05124F1B-FF29-41E3-AD9E-780C730BFDAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{568AF064-0FC2-4C32-87F6-D3AB04F813B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystemTest", "..\CustomerManagementSystemTest\CustomerManagementSystemTest.csproj", "{59EC5548-D3E4-4399-B58F-5B408E40D4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{05124F1B-FF29-41E3-AD9E-780C730BFDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05124F1B-FF29-41E3-AD9E-780C730BFDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05124F1B-FF29-41E3-AD9E-780C730BFDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EC5548-D3E4-4399-B58F-5B408E40D4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EC5548-D3E4-4399-B58F-5B408E40D4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EC5548-D3E4-4399-B58F-5B408E40D4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EC5548-D3E4-4399-B58F-5B408E40D4D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59EC5548-D3E4-4399-B58F-5B408E40D4D5} = {568AF064-0FC2-4C32-87F6-D3AB04F813B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {176D19BA-FF17-4411-91CB-486808DBD471}
