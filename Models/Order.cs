@@ -50,7 +50,7 @@
             return new List<Order>();
         }
 
-        //Saves the current customer
+        //Saves the current order
         public bool Save()
         {
             return true;
