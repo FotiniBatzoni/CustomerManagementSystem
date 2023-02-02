@@ -37,23 +37,5 @@
             return isValid;
         }
 
-        //Retrieve one order
-        public Order Retrieve(Guid orderId)
-        {
-            return new Order();
-        }
-
-        //Retrireve all orders
-        //overloading!!!
-        public List<Order> Retrieve()
-        {
-            return new List<Order>();
-        }
-
-        //Saves the current order
-        public bool Save()
-        {
-            return true;
-        }
     }
 }
