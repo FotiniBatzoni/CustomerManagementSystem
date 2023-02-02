@@ -35,12 +35,12 @@
         public bool Validate()
         {
             var isValid = true;
-            if (!string.IsNullOrEmpty(LastName))
+            if (string.IsNullOrEmpty(LastName))
             {
                 isValid = false;
             }
 
-            if (!string.IsNullOrEmpty(Email))
+            if (string.IsNullOrEmpty(Email))
             {
                 isValid = false;
             }
