@@ -6,7 +6,7 @@
         {
             Customer customer = new Customer(customerId);
 
-            if(Guid.TryParse("a5b354d2-e019-4daa-ae46-15ea150ac5bd", out Guid parsedGuid))
+            if(Guid.TryParse("1A3B944E-3632-467B-A53A-206305310BAE", out Guid parsedGuid))
             {
                 customer.CustomerId = parsedGuid;
                 customer.FirstName = "Tony";
