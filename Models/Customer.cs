@@ -2,6 +2,19 @@
 {
     public class Customer
     {
+        //Default Constructor
+        public Customer()
+        {
+
+        }
+
+        //Parameterized Constructor
+        public Customer(Guid customerId)
+        {
+            CustomerId = customerId;
+        }
+
+
         public Guid CustomerId { get; set; }
         public string FirstName { get; set; }
 
