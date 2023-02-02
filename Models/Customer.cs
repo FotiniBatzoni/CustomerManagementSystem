@@ -30,5 +30,42 @@
 
         public string WorkAddress { get; set; }
 
+
+        //Validate the customer data
+        public bool Validate()
+        {
+            var isValid = true;
+            if (!string.IsNullOrEmpty(LastName))
+            {
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(Email))
+            {
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        //Retrieve one customer
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+        }
+
+        //Retrireve all customers
+        //overloading!!!
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
+
+        //Saves the current customer
+        public bool Save()
+        {
+            return true;
+        }
+
     }
 }
