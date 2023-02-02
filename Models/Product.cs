@@ -16,7 +16,7 @@
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal? CurrentPrice { get; set; }
 
 
         //Validate the product data
@@ -28,6 +28,10 @@
                 isValid = false;
             }
 
+            if (CurrentPrice == null)
+            {
+                isValid = false;
+            }
             return isValid;
         }
 
