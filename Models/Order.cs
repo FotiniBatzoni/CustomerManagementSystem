@@ -14,7 +14,7 @@
 
         public Guid OrderId { get; set; }
 
-        public DateTime OrderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
 
         public string ShippingAdress { get; set; }
 
@@ -26,19 +26,19 @@
 
 
         //Validate the order data
-        //public bool Validate()
-        //{
-        //    var isValid = true;
-        //    if ()
-        //    {
-        //        isValid = false;
-        //    }
+        public bool Validate()
+        {
+            var isValid = true;
+            if (OrderDate == null)
+            {
+                isValid = false;
+            }
 
-        //    return isValid;
-        //}
+            return isValid;
+        }
 
         //Retrieve one order
-        public Order Retrieve(int orderId)
+        public Order Retrieve(Guid orderId)
         {
             return new Order();
         }
