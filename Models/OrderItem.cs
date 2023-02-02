@@ -15,24 +15,27 @@
 
         public Guid OrderItemId { get; set; }
 
+        public Guid ProductId { get; set; }
+
         public float Quantity { get; set; }
 
-        public decimal PurchasePrice { get; set; }
+        public decimal? PurchasePrice { get; set; }
 
 
         //Validate the order item data
         public bool Validate()
         {
             var isValid = true;
-            if (Quantity == null)
+            if (Quantity <= 0)
             {
                 isValid = false;
             }
 
-            if(PurchasePrice == null)
+            if (PurchasePrice == null)
             {
-
+                isValid = false;
             }
+
 
             return isValid;
         }
