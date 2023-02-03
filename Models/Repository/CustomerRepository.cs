@@ -2,6 +2,13 @@
 {
     public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+        private AddressRepository addressRepository { get; set; }
+
+
         public Customer Retrieve(Guid customerId)
         {
             Customer customer = new Customer(customerId);
@@ -12,7 +19,7 @@
                 customer.FirstName = "Tony";
                 customer.LastName = "Balis";
                 customer.Email = "tony@example.com";
-
+                customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
 
             return customer;
