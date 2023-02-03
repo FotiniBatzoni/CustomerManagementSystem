@@ -42,6 +42,7 @@
 
         public List<Address> AddressList { get; set; }
 
+        public int CustomerType { get; set; }
 
         //Validate the customer data
         public bool Validate()
