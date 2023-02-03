@@ -12,6 +12,7 @@
         public Customer(Guid customerId)
         {
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
 
@@ -39,9 +40,7 @@
 
         public string Email { get; set; }
 
-        public string HomeAddress { get; set; }
-
-        public string WorkAddress { get; set; }
+        public List<Address> AddressList { get; set; }
 
 
         //Validate the customer data
