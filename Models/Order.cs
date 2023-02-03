@@ -2,14 +2,15 @@
 {
     public class Order
     {
-        public Order()
-        {
+        public Order() 
+        { 
 
         }
 
         public Order(Guid orderId)
         {
             OrderId = orderId;
+            OrderItems = new List<OrderItem>();
         }
 
         public Guid OrderId { get; set; }
@@ -20,9 +21,11 @@
 
         public Product Product { get; set; }
 
-        public Customer Customer { get; set; }
+        public Guid CustomerId { get; set; }
 
-        public OrderItem OrderItem { get; set; }
+        public Guid ShippingAddressId { get; set; }
+
+        public List<OrderItem> OrderItems { get; set; }
 
 
         //Validate the order data
