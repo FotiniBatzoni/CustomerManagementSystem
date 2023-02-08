@@ -27,6 +27,11 @@
 
         public List<OrderItem> OrderItems { get; set; }
 
+        public override string ToString()
+        {
+            return $"{OrderDate.Value.Date}({OrderId})";
+        }
+
 
         //Validate the order data
         public bool Validate()

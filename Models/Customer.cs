@@ -44,6 +44,11 @@
 
         public int CustomerType { get; set; }
 
+        public override string ToString()
+        {
+            return FullName;
+        }
+
         //Validate the customer data
         public bool Validate()
         {

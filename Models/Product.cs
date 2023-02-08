@@ -18,6 +18,11 @@
 
         public decimal? CurrentPrice { get; set; }
 
+        public override string ToString()
+        {
+            return ProductName;
+        }
+
 
         //Validate the product data
         public bool Validate()
