@@ -1,4 +1,6 @@
-﻿namespace CustomerManagementSystem.Models
+﻿using Common;
+
+namespace CustomerManagementSystem.Models
 {
     public class Product : EntityBase
     {
@@ -17,8 +19,9 @@
         private string _productName;    
         public string ProductName { 
             get 
-            { 
-                return _productName;
+            {
+                var stringHandler = new StringHandler();
+                return stringHandler.InsertSpaces(_productName);
             }
             set 
             { 
