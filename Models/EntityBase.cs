@@ -17,11 +17,8 @@
         {
             get { return Validate(); }
         }
-  
-        public virtual bool Validate()
-        {
-            return true;
-        }
+
+        public abstract bool Validate();
 
     }
 }
