@@ -20,7 +20,11 @@ namespace CustomerManagementSystem.Models
         public string ProductName { 
             get 
             {
-                return StringHandler.InsertSpaces(_productName);
+                //using a static method (StringHandler)
+              //  return StringHandler.InsertSpaces(_productName);
+
+                //using StringHandler as an Extension method
+                return _productName.InsertSpaces();
             }
             set 
             { 
