@@ -1,6 +1,6 @@
 ﻿namespace CustomerManagementSystem.Models
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -25,7 +25,7 @@
 
 
         //Validate the product data
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrEmpty(ProductName))
