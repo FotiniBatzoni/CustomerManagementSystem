@@ -44,6 +44,14 @@
 
         public int CustomerType { get; set; }
 
+        //public string Log()
+        //{
+        //    var logString = CustomerId + ":" + FullName + " Email:" + Email; // + "Status: " + EntityState.ToString();
+        //        return logString;
+        //}
+
+        public string Log() => $"{CustomerId}: {FullName} Email: {Email}";
+
         public override string ToString()
         {
             return FullName;
