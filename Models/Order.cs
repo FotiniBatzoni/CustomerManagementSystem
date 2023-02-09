@@ -1,6 +1,8 @@
-﻿namespace CustomerManagementSystem.Models
+﻿using Common;
+
+namespace CustomerManagementSystem.Models
 {
-    public class Order
+    public class Order :EntityBase, ILoggable
     {
         public Order() 
         { 
@@ -27,6 +29,9 @@
 
         public List<OrderItem> OrderItems { get; set; }
 
+        public string Log() => $"{OrderId}: Date {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
+  
+
         public override string ToString()
         {
             return $"{OrderDate.Value.Date}({OrderId})";
@@ -34,7 +39,7 @@
 
 
         //Validate the order data
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (OrderDate == null)
