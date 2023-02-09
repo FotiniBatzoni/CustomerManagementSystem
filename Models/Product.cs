@@ -2,7 +2,7 @@
 
 namespace CustomerManagementSystem.Models
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -40,7 +40,7 @@ namespace CustomerManagementSystem.Models
             return ProductName;
         }
 
-        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription}";
+        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription}  Status: {EntityState.ToString()}";
 
         //Validate the product data
         public override bool Validate()
