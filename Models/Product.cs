@@ -40,6 +40,7 @@ namespace CustomerManagementSystem.Models
             return ProductName;
         }
 
+        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription}";
 
         //Validate the product data
         public override bool Validate()
