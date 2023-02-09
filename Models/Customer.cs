@@ -1,6 +1,8 @@
-﻿namespace CustomerManagementSystem.Models
+﻿using Common;
+
+namespace CustomerManagementSystem.Models
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
         //Default Constructor
         public Customer()
@@ -50,7 +52,7 @@
         //        return logString;
         //}
 
-        public string Log() => $"{CustomerId}: {FullName} Email: {Email}";
+        public string Log() => $"{CustomerId}: {FullName} Email: {Email} Status: {EntityState.ToString()}";
 
         public override string ToString()
         {
@@ -58,7 +60,7 @@
         }
 
         //Validate the customer data
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrEmpty(LastName))
